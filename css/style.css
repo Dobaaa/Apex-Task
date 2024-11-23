@@ -10,9 +10,11 @@
   --btn-color: #189cce;
   --txt-color: #2d5f8a;
   --gray: #cbcaca;
+  --mainBackGround: #fafafa;
 }
 body {
   font-family: "Cairo", sans-serif !important;
+  background-color: var(--mainBackGround) !important;
 }
 
 .fs-12px {
@@ -44,39 +46,62 @@ ul {
 }
 /* end global valuses */
 
-/* start nav */
-.socail-meadia i {
+/* General Styles */
+.nav-body {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  border: 1px solid var(--white);
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-}
-li a {
   position: relative;
-  text-decoration: none;
-  color: var(--white);
-}
-li a::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  right: 0;
-  width: 0;
-  background-color: var(--btn-color);
-  height: 2px;
-  transition: width 0.3s ease;
-}
-li a:hover::after {
-  width: 100%;
 }
 
-li a:hover {
-  color: var(--white);
+.nav-links ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
 }
-/* end nav */
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: var(--btn-color);
+}
+
+/* Responsive Styles */
+.nav-toggle {
+  display: none;
+}
+
+.nav-links {
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links ul {
+    display: none !important;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--bg-color);
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .nav-links.open ul {
+    display: flex !important;
+  }
+
+  .nav-toggle {
+    display: block !important;
+  }
+}
 
 /* start landing */
 .landing h1 {
@@ -125,7 +150,6 @@ li a:hover {
   margin: 0px 5px;
 }
 
-/* تنسيق الليبل */
 .dropdown-label {
   display: block;
   font-size: 16px;
@@ -133,7 +157,6 @@ li a:hover {
   color: #333;
 }
 
-/* تنسيق الزر */
 .dropdown-btn {
   background-color: #f1f1f1;
   color: #666;
@@ -145,7 +168,6 @@ li a:hover {
   text-align: left;
   border-radius: 5px;
 }
-/* تنسيق الـ dropdown */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -157,23 +179,19 @@ li a:hover {
   border-radius: 5px;
 }
 
-/* عرض المحتوى عند الضغط على الزر */
 .dropdown.show .dropdown-content {
   display: block;
 }
 
-/* تنسيق الـ input range */
 .range-input {
   width: 100%;
 }
 
-/* تنسيق النصوص */
 label {
   display: block;
   padding: 5px 0;
 }
 
-/* تنسيق الـ checkbox */
 input[type="checkbox"] {
   margin-right: 10px;
 }
@@ -184,6 +202,7 @@ input[type="checkbox"] {
   height: 100%;
   padding: 30px;
   padding-bottom: 400px !important;
+  background-color: var(--mainBackGround) !important;
 }
 
 .swiper-slide {
@@ -209,6 +228,8 @@ input[type="checkbox"] {
 }
 .card {
   border: none !important;
+  cursor: pointer;
+  background-color: transparent !important;
 }
 .card img {
   width: 240px;
@@ -237,6 +258,143 @@ input[type="checkbox"] {
 .swiper-pagination-bullets {
   bottom: 0px !important;
 }
-.swiper-pagination {
-}
+
 /*end swiper js area */
+
+/* start services */
+.services {
+  background: url(../assets/sercicesBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--mainBackGround);
+}
+.services-boxes {
+  background-color: var(--white);
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 10px;
+}
+.services-txt h2,
+.services-boxes-txt h4 {
+  color: var(--txt-color);
+  font-weight: bold;
+}
+.services-txt p {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.services-boxes img {
+  background-color: var(--btn-color);
+  padding: 15px;
+  border-radius: 50%;
+}
+.services-boxes:nth-child(3) img {
+  background-color: #8143ee;
+}
+.services-boxes:nth-child(4) img {
+  background-color: #43e7cc;
+}
+.services-boxes:nth-child(5) img {
+  background-color: var(--txt-color);
+}
+.services-img {
+  position: relative;
+}
+.service-zoom-img-2 {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
+/* end services*/
+
+/*  start pagination*/
+/* Carousel Container */
+.carousel-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Buttons */
+.nav-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pagination Card */
+.pagination-card {
+  width: 80px;
+  height: 100px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  transform: scale(0.8);
+}
+
+.pagination-card.active {
+  width: 120px;
+  height: 150px;
+  background-color: #ff5722;
+  color: #fff;
+  transform: scale(1);
+}
+/* end pagination*/
+
+/*  start footer */
+
+footer {
+  background: url(../assets/Mask\ Group\ 9.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--txt-color);
+  color: var(--white);
+}
+
+.footer-media h4 {
+  font-size: 15px;
+}
+footer .contact ul {
+  line-height: 35px;
+}
+footer .contact i {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--btn-color);
+  background-color: var(--gray);
+  border-radius: 50%;
+}
+.contact-icons {
+  line-height: 35px;
+}
+/*  end footer */

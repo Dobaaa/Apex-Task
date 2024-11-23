@@ -18,7 +18,8 @@
   </head>
   <body>
     <div class="backGround">
-      <!-- start Nav-->
+      <!-- start Nav -->
+      <!-- start Nav -->
       <nav class="custom-background">
         <div class="nav-head p-3">
           <div
@@ -38,11 +39,17 @@
           </div>
         </div>
         <div
-          class="nav-body d-flex justify-content-evenly align-items-center pb-3"
+          class="nav-body d-flex justify-content-between align-items-center pb-3"
         >
           <div class="nav-btn">
             <button class="custom-btn d-flex gap-2 align-items-center">
               التسجيل<i class="fa-regular fa-user"></i>
+            </button>
+          </div>
+
+          <div class="nav-toggle">
+            <button id="toggle-btn" class="custom-btn">
+              <i class="fa-solid fa-bars"></i>
             </button>
           </div>
           <div class="nav-links">
@@ -51,17 +58,19 @@
               <li><a href="#">المدونة</a></li>
               <li><a href="#">الوجهات السياحية</a></li>
               <li><a href="#">عن الشركة</a></li>
-              <li><a href="#"> خدماتنا</a></li>
+              <li><a href="#">خدماتنا</a></li>
               <li><a href="#">الرئيسية</a></li>
             </ul>
           </div>
           <div class="nav-logo">
-            <img src="./assets/Untitled-2.png" alt="" srcset="" />
+            <img src="./assets/Untitled-2.png" alt="Logo" />
           </div>
         </div>
       </nav>
-      <!-- end Nav-->
 
+      <!-- end Nav -->
+
+      <!-- end Nav -->
       <!--start landing -->
 
       <div class="landing pt-5 mt-5">
@@ -175,33 +184,91 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="container">
-            <div class="row d-flex justify-content-center gap-5">
-              <div class="col-2 card d-flex flex-column align-items-center">
+            <div
+              class="row d-flex justify-content-center gap-5 flex-sm-column flex-md-row align-items-center"
+            >
+              <div
+                class="col-sm-12 col-md-3 col-lg-2 card d-flex flex-column align-items-center"
+              >
                 <div class="zoom-img">
                   <img src="./assets/card5.png" alt="" />
                 </div>
 
                 <h4>ولاية صلالة</h4>
               </div>
-              <div class="col-2 card d-flex flex-column align-items-center">
+              <div
+                class="col-sm-12 col-md-3 col-lg-2 card d-flex flex-column align-items-center"
+              >
                 <div class="zoom-img">
                   <img src="./assets/card3.png" alt="" />
                 </div>
                 <h4>ولاية صلالة</h4>
               </div>
-              <div class="col-2 card d-flex flex-column align-items-center">
+              <div
+                class="col-sm-12 col-md-3 col-lg-2 card d-flex flex-column align-items-center"
+              >
                 <div class="zoom-img">
                   <img src="./assets/card2.png" alt="" />
                 </div>
                 <h4>ولاية صلالة</h4>
               </div>
-              <div class="col-2 card d-flex flex-column align-items-center">
+              <div
+                class="col-sm-12 col-md-3 col-lg-2 card d-flex flex-column align-items-center"
+              >
                 <div class="zoom-img">
                   <img src="./assets/card1.png" alt="" />
                 </div>
                 <h4>ولاية صلالة</h4>
               </div>
-              <div class="col-2 card d-flex flex-column align-items-center">
+              <div
+                class="col-sm-12 col-md-3 col-lg-2 card d-flex flex-column align-items-center"
+              >
+                <div class="zoom-img">
+                  <img src="./assets/card4.png" alt="" />
+                </div>
+                <h4>ولاية صلالة</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="row d-flex justify-content-center gap-5">
+              <div
+                class="col-sm-12 col-md-3 col-lg-2 card d-flex flex-column align-items-center"
+              >
+                <div class="zoom-img">
+                  <img src="./assets/card5.png" alt="" />
+                </div>
+                <h4>ولاية صلالة</h4>
+              </div>
+              <div
+                class="col-sm-12 col-md-3 col-lg-2 card d-flex flex-column align-items-center"
+              >
+                <div class="zoom-img">
+                  <img src="./assets/card3.png" alt="" />
+                </div>
+                <h4>ولاية صلالة</h4>
+              </div>
+              <div
+                class="col-sm-12 col-md-3 col-lg-2 card d-flex flex-column align-items-center"
+              >
+                <div class="zoom-img">
+                  <img src="./assets/card2.png" alt="" />
+                </div>
+                <h4>ولاية صلالة</h4>
+              </div>
+              <div
+                class="col-sm-12 col-md-3 col-lg-2 card d-flex flex-column align-items-center"
+              >
+                <div class="zoom-img">
+                  <img src="./assets/card1.png" alt="" />
+                </div>
+                <h4>ولاية صلالة</h4>
+              </div>
+              <div
+                class="col-sm-12 col-md-3 col-lg-2 card d-flex flex-column align-items-center"
+              >
                 <div class="zoom-img">
                   <img src="./assets/card4.png" alt="" />
                 </div>
@@ -288,37 +355,151 @@
             </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="container">
-            <div class="row d-flex justify-content-center gap-5">
-              <div class="col-2 card d-flex flex-column align-items-center">
-                <img src="./assets/card5.png" alt="" />
-                <h4>ولاية صلالة</h4>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+
+    <!--start services -->
+    <div class="services mt-5 pt-5 pb-5">
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-sm-12 col-md-6">
+            <div class="services-txt">
+              <div class="services-txt-head text-end">
+                <h2 class="">الخدمات</h2>
+                <p>
+                  توفر شركةRound In Oman العديد من الخدمات المتنوعة و المميزة
+                  استكشفها و استمتع معنا
+                </p>
               </div>
-              <div class="col-2 card d-flex flex-column align-items-center">
-                <img src="./assets/card3.png" alt="" />
-                <h4>ولاية صلالة</h4>
+              <div
+                class="services-boxes d-flex align-items-center justify-content-end gap-3"
+              >
+                <div class="services-boxes-txt">
+                  <h4 class="text-end">خدمات الرحلات</h4>
+                  <p>فرصة رائعة لاكتشاف أماكن جديدة وتجربة مغامرات مميزة</p>
+                </div>
+                <img src="./assets/travel-svgrepo-com.png" alt="" />
               </div>
-              <div class="col-2 card d-flex flex-column align-items-center">
-                <img src="./assets/card2.png" alt="" />
-                <h4>ولاية صلالة</h4>
+              <div
+                class="services-boxes d-flex align-items-center gap-3 justify-content-end"
+              >
+                <div class="services-boxes-txt">
+                  <h4 class="text-end">خدمات الرحلات</h4>
+                  <p>فرصة رائعة لاكتشاف أماكن جديدة وتجربة مغامرات مميزة</p>
+                </div>
+                <img src="./assets/car-roof-box-svgrepo-com.png" alt="" />
               </div>
-              <div class="col-2 card d-flex flex-column align-items-center">
-                <img src="./assets/card1.png" alt="" />
-                <h4>ولاية صلالة</h4>
+              <div
+                class="services-boxes d-flex align-items-center gap-3 justify-content-end"
+              >
+                <div class="services-boxes-txt">
+                  <h4 class="text-end">خدمات الرحلات</h4>
+                  <p>فرصة رائعة لاكتشاف أماكن جديدة وتجربة مغامرات مميزة</p>
+                </div>
+                <img src="./assets/camping-at-night-svgrepo-com.png" alt="" />
               </div>
-              <div class="col-2 card d-flex flex-column align-items-center">
-                <img src="./assets/card4.png" alt="" />
-                <h4>ولاية صلالة</h4>
+              <div
+                class="services-boxes d-flex align-items-center gap-3 justify-content-end"
+              >
+                <div class="services-boxes-txt">
+                  <h4 class="text-end">خدمات الرحلات</h4>
+                  <p>فرصة رائعة لاكتشاف أماكن جديدة وتجربة مغامرات مميزة</p>
+                </div>
+                <img src="./assets/hotel-building-svgrepo-com.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="services-img d-flex justify-content-center">
+              <div class="service-zoom-img">
+                <img src="./assets/\/services1.png" alt="" />
+              </div>
+              <div class="service-zoom-img-2">
+                <img src="./assets/services2.png" alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
     </div>
+    <!--end services-->
 
-    <!-- Swiper JS -->
+    <!--start pagenation -->
+    <div class="pagination">
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="pagination-card active">1</div>
+          <div class="pagination-card">2</div>
+          <div class="pagination-card">3</div>
+          <div class="pagination-card">4</div>
+          <div class="pagination-card">5</div>
+        </div>
+        <div class="pagination-btns">
+          <button id="prev" class="nav-button">◀</button>
+          <button id="next" class="nav-button">▶</button>
+        </div>
+      </div>
+    </div>
+    <!--end pagenation -->
+
+    <!--start footer-->
+    <footer class="pt-5 pb-5">
+      <div class="footer-body container">
+        <div class="row d-flex align-items-start">
+          <div class="contact col-sm-12 col-lg-3">
+            <h4 class="text-start">بيانات التواصل</h4>
+            <div class="quick-contact d-flex align-items-center gap-2">
+              <ul>
+                <li class="">+2 1235 1235 123</li>
+                <li class="">Info@mail.com</li>
+                <li class="">Egypt - Cairo</li>
+              </ul>
+              <div class="contact-icons">
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-regular fa-envelope"></i>
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+            </div>
+          </div>
+          <div class="footer-links col-3">
+            <h4 class="text-end">الصفحات</h4>
+            <div class="pages d-flex">
+              <ul>
+                <li>الأحكام والشروط</li>
+                <li>سياسات الخصوصية</li>
+                <li>الأسئلة الشائعة</li>
+                <li>تواصل معنا</li>
+              </ul>
+              <ul class="text-end">
+                <li>خدماتنا</li>
+                <li>عن الشركة</li>
+                <li>الوجهات السياحية</li>
+                <li>المدونة</li>
+                <li>ألبوم الصور</li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="footer-media col-6 d-flex flex-column align-items-end justify-content-center text-end"
+          >
+            <img src="./assets/Untitled-2.png" alt="" />
+            <h4 class="text-end">
+              موقع هـو منصة إلـكترونية تـهدف إلـى تقديم مـجموعة متنوعة مـن
+              الخيارات للـسياح والمقيمين لاستكشاف الجمال والتاريخ
+            </h4>
+            <div class="foot-social-icons">
+              <i class="fa-regular fa-bell"></i>
+              <i class="fa-brands fa-tiktok"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--end footer-->
     <!--start scripts-->
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
