@@ -3,15 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--css main file -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!--css Bootstrap file -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- css fontawesome  file -->
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Login</title>
   </head>
   <body>
-    <div class="form">
+    <div class="form d-flex align-items-center">
       <div class="container">
         <div class="row">
-          <div class="col-6"><form action=""></form></div>
-          <div class="col-6">
-            <img src="./assets/Group 157223.png" alt="" />
+          <div class="col-sm-12 col-lg-6">
+            <form action="" class="text-center">
+              <div class="form-txt">
+                <img src="./assets/Untitled-2.png" alt="" />
+                <h1>إنشاء حساب</h1>
+                <h4>يجب إدخال البيانات لإنشاء حساب جديد</h4>
+              </div>
+              <div class="inpt">
+                <label for=""></label>
+                <input type="text" placeholder="الاسم كاملاً" />
+              </div>
+              <div class="inpt">
+                <label for=""></label>
+                <input type="email" placeholder="البريد الالكتروني" />
+              </div>
+              <div class="inpt">
+                <label for=""></label>
+                <input type="text" placeholder="رقم الواتساب" />
+              </div>
+              <div class="inpt">
+                <label for=""></label>
+                <input type="password" placeholder="كلمة المرور" />
+              </div>
+              <button type="submit" class="custom-btn">إنشاء الحساب</button>
+              <span class="d-block"
+                >امتلك حساب بالفعل <a href="">تسجيل الدخول</a></span
+              >
+            </form>
+          </div>
+          <div class="col-sm-12 col-lg-6 text-center">
+            <img src="./assets/Group 157228.png" class="img-auth" alt="" />
           </div>
         </div>
       </div>
