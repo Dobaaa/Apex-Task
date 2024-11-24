@@ -47,6 +47,12 @@ var swiper3 = new Swiper(".mySwiper3", {
 window.addEventListener("scroll", () => {
   const targetElements = document.querySelectorAll(".animated-element"); // All elements with the class
   const targetElementsTwo = document.querySelectorAll(".animated-element-two"); // All elements with the class
+  const targetElementsThree = document.querySelectorAll(
+    ".animated-element-Three"
+  ); // All elements with the class
+  const targetElementsFour = document.querySelectorAll(
+    ".animated-element-Four"
+  ); // All elements with the class
   const section = document.getElementById("services"); // Target section
 
   const sectionTop = section.getBoundingClientRect().top;

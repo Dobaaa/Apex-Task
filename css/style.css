@@ -230,7 +230,6 @@ input[type="checkbox"] {
 }
 .zoom-img {
   overflow: hidden !important;
-
   max-height: 240px;
 }
 .card img:hover {
@@ -298,7 +297,27 @@ input[type="checkbox"] {
   position: absolute;
   top: 20%;
   right: 5%;
+  overflow: hidden;
 }
+
+.service-zoom-img {
+  overflow: hidden; /* يمنع الصورة من الخروج */
+  max-height: 590px; /* يحدد ارتفاع الحاوية */
+  position: relative; /* لتقييد المحتوى داخل الحاوية */
+  display: flex;
+  justify-content: center; /* توسيط الصورة أفقيًا */
+  align-items: center; /* توسيط الصورة عموديًا */
+}
+
+.service-zoom-img img {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+  display: block;
+}
+
 /* end services*/
 
 /*  start pagination*/
@@ -413,6 +432,19 @@ footer .contact i {
   border-radius: 50%;
   background-color: var(--btn-color);
 }
+.pages ul li {
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+  text-align: end !important;
+}
+.pages ul li i {
+  font-size: 10px;
+  color: var(--gray);
+}
 /*  end footer */
 
 /* start auth page */
@@ -453,20 +485,28 @@ form input::placeholder {
 /*  start a anmation area */
 
 .animated-element,
-.animated-element-two {
+.animated-element-two,
+.animated-element-Three,
+.animated-element-Four {
   position: relative;
-  transform: translateX(0); /* التحريك الأفقي يبدأ من الصفر */
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* انتقال سلس */
+  transform: translateX(0);
+  transform: translateY(0);
+  transform: scale(1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* الكلاس الذي يضيف الأنيميشن */
 .animated-element.animate {
-  transform: translateX(-30px); /* التحريك إلى اليمين */
+  transform: translateX(-30px);
 }
 
 .animated-element-two.animate {
-  transform: translateX(30px); /* التحريك إلى اليمين */
+  transform: translateX(30px);
 }
+.animated-element-Three {
+}
+.animated-element-Four {
+}
+
 /*  end  a anmation area */
 
 /*  responsive area */
