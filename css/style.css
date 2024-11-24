@@ -451,6 +451,22 @@ form input::placeholder {
 /* end auth page */
 
 /*  start a anmation area */
+
+.animated-element,
+.animated-element-two {
+  position: relative;
+  transform: translateX(0); /* التحريك الأفقي يبدأ من الصفر */
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* انتقال سلس */
+}
+
+/* الكلاس الذي يضيف الأنيميشن */
+.animated-element.animate {
+  transform: translateX(-30px); /* التحريك إلى اليمين */
+}
+
+.animated-element-two.animate {
+  transform: translateX(30px); /* التحريك إلى اليمين */
+}
 /*  end  a anmation area */
 
 /*  responsive area */

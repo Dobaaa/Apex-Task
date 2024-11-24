@@ -41,6 +41,34 @@ var swiper3 = new Swiper(".mySwiper3", {
   },
 });
 
+/* end swiper */
+
+/* start  Scroll-Triggered Animations */
+window.addEventListener("scroll", () => {
+  const targetElements = document.querySelectorAll(".animated-element"); // All elements with the class
+  const targetElementsTwo = document.querySelectorAll(".animated-element-two"); // All elements with the class
+  const section = document.getElementById("services"); // Target section
+
+  const sectionTop = section.getBoundingClientRect().top;
+  const triggerPoint = window.innerHeight / 1.5; // Activation point
+
+  if (sectionTop < triggerPoint) {
+    targetElements.forEach((element) => {
+      element.classList.add("animate");
+    });
+    targetElementsTwo.forEach((element) => {
+      element.classList.add("animate");
+    });
+  } else {
+    targetElements.forEach((element) => {
+      element.classList.remove("animate");
+    });
+    targetElementsTwo.forEach((element) => {
+      element.classList.remove("animate");
+    });
+  }
+});
+
 /*  start pagination */
 
 const cards = document.querySelectorAll(".pagination-card");
