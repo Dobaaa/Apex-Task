@@ -502,10 +502,6 @@ form input::placeholder {
 .animated-element-two.animate {
   transform: translateX(30px);
 }
-.animated-element-Three {
-}
-.animated-element-Four {
-}
 
 /*  end  a anmation area */
 
@@ -569,6 +565,13 @@ form input::placeholder {
   }
   .search-box {
     width: 100% !important;
+  }
+  .animated-element.animate {
+    transform: translateX(0px);
+  }
+
+  .animated-element-two.animate {
+    transform: translateX(0px);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1000px) {
