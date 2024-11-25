@@ -13,6 +13,18 @@
   --mainBackGround: #fafafa;
   --input: #dfdfdf;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Cairo", sans-serif !important;
   background-color: var(--mainBackGround) !important;
@@ -42,10 +54,12 @@ input {
 }
 
 .backGround {
+  overflow: hidden !important;
   background: url(../assets/Mask\ Group\ 25.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
   height: 100vh;
 }
 /* end global valuses */
