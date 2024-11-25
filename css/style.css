@@ -575,6 +575,10 @@ form input::placeholder {
   .animated-element-two.animate {
     transform: translateX(0px);
   }
+  .service-zoom-img img,
+  .service-zoom-img-2 img {
+    transform: scale(0.8);
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   .img-auth {
